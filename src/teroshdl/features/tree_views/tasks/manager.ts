@@ -289,8 +289,8 @@ export class Tasks_manager extends BaseView {
                 shellArgs: consoleDefinition.options,
                 isTransient: true,
                 iconPath: {
-                    light: vscode.Uri.file(get_icon(consoleDefinition.iconName).light),
-                    dark: vscode.Uri.file(get_icon(consoleDefinition.iconName).dark)
+                    light: get_icon(consoleDefinition.iconName).light,
+                    dark: get_icon(consoleDefinition.iconName).dark,
                 }
             });
             terminal.show();
