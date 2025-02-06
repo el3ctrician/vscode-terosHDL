@@ -67,7 +67,7 @@ jobs:
         run: |
           npm install -g @vscode/vsce
           npm run-script package-prerelease
-              
+
           file=`ls *pre-release.vsix`
           echo ${{ env.version }}
           file_ver="${{ env.version }}_prerelease_${file}"
@@ -78,7 +78,7 @@ jobs:
           mv $file ${{ github.workspace }}/$file_ver
 
       - name: Archive vsix
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: teroshld
           path: |
