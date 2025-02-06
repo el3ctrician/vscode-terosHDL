@@ -163,7 +163,7 @@ export class Dependency_manager {
             });
         if (result !== undefined) {
             fs.writeFileSync(result.fsPath, svg);
-            globalLogger.info(`Dependency graph image saved in: ${result.fsPath}`, true);
+            vscode.window.showInformationMessage(`Dependency graph image saved in: ${result.fsPath}`);
         }
     }
 

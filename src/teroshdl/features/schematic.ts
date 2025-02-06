@@ -148,16 +148,16 @@ export class Schematic_manager extends Base_webview {
 
         try {
             const schematic: any = await this.generateFromfile(vscode_document.filename);
-    
+
             if (schematic === undefined || schematic === '') {
                 return;
             }
-    
+
             let result = '';
             if (schematic.empty === false) {
                 result = schematic.result;
             }
-    
+
             await this.panel?.webview.postMessage({ command: "update", result: result });
         }
         catch (error) {
@@ -176,7 +176,7 @@ export class Schematic_manager extends Base_webview {
                     let path_norm = utils.normalize_path(fileInfos?.path);
 
                     fs.writeFileSync(path_norm, svg);
-                    globalLogger.info(`Schematic saved in: ${path_norm}`, true);
+                    vscode.window.showInformationMessage(`Schematic saved in: ${path_norm}`);
                 }
             });
         }

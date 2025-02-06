@@ -78,7 +78,7 @@ export class Documenter_manager extends Base_webview {
             lang: get_language_from_filepath(documentPath),
             code: read_file_sync(documentPath)
         };
-        
+
         if (this.panel === undefined) {
             this.panel = vscode.window.createWebviewPanel(
                 'catCoding',
@@ -163,7 +163,7 @@ export class Documenter_manager extends Base_webview {
     // }
 
     private show_export_message(path_exp: string) {
-        globalLogger.info(`Document saved in the path: ${path_exp}`, true);
+        vscode.window.showInformationMessage(`Document saved in the path: ${path_exp}`);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

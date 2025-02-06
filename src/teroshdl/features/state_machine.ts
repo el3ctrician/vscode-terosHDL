@@ -67,8 +67,8 @@ export class State_machine_manager extends Base_webview {
             'state_machine_viewer', 'libs', 'viz.js'));
 
         const html = nunjucks.renderString(template_str, {
-            "css_common_path": css_common_path, 
-            "css_bootstrap_path": css_bootstrap_path, 
+            "css_common_path": css_common_path,
+            "css_bootstrap_path": css_bootstrap_path,
             "cspSource": webview.cspSource,
             "js_path_0": js_path_0,
             "js_path_1": js_path_1,
@@ -286,7 +286,7 @@ export class State_machine_manager extends Base_webview {
                 for (let i = 0; i < this.state_machines.svg.length; ++i) {
                     let custom_path = path_lib.join(dir_name, `${inputName}_${i}.svg`);
                     fs.writeFileSync(custom_path, this.state_machines.svg[i].image);
-                    globalLogger.info(`State machine image saved in: ${custom_path}`, true);
+                    vscode.window.showInformationMessage(`State machine image saved in: ${custom_path}`);
                 }
             }
         }

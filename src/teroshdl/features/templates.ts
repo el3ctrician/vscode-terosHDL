@@ -79,7 +79,7 @@ export class Template_manager {
             globalLogger.error("Make sure that the cursor is in the active document and select a valid file.", true);
         }
         else {
-            globalLogger.info("Template copied to clipboard.", true);
+            vscode.window.showInformationMessage("Template copied to clipboard.");
             vscode.env.clipboard.writeText(template);
         }
     }
