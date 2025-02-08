@@ -31,15 +31,29 @@ The toolbox tries to be as much self-contained as possible and simplify the inst
 
 ![TerosHDL](https://github.com/TerosTechnology/vscode-terosHDL/blob/dev//resources/images/gui.gif?raw=true)
 
+## Development
+
+if you want to contribute with a bug fix or new feature implementation you can use the following steps:
+
+  1. make fork
+  2. `git clone [FORK URL]`
+  3. `cd vscode-terosHDL`
+  4. `git checkout dev` this should put you on *dev* branch where we do development
+  5. `npm install`
+
+now you can start coding. Tests can be run using `npm run test` once you are done you can open a pull request!
+
+
+
 ## Managed by
 
-- [Carlos Alberto Ruiz](https://www.linkedin.com/in/carlos-alberto-ruiz-fpga/): carlosruiznaranjo@gmail.com 
+- [Carlos Alberto Ruiz](https://www.linkedin.com/in/carlos-alberto-ruiz-fpga/): carlosruiznaranjo@gmail.com
 - [Ismael Pérez](https://www.linkedin.com/in/ispero/): ismaelprojo@gmail.com
 
 ## Sponsor
 
-This project was funded through the NGI Assure Fund, a fund established by NLnet with financial support from 
-the European Commission's Next Generation Internet programme, under the aegis of DG Communications Networks, 
+This project was funded through the NGI Assure Fund, a fund established by NLnet with financial support from
+the European Commission's Next Generation Internet programme, under the aegis of DG Communications Networks,
 Content and Technology under grant agreement No 957073.
 
 
